@@ -1,14 +1,23 @@
 # travis-ci
 os: linux
-dist: trusty
+dist: xenial
 language: node_js
 node_js:
   - '10'
   - '12'
   - '14'
+
+git:
+  quiet: true
+
+cache: npm
+
+before-install: npm i --global truffle@5.1.20
 install:
-  - yarn
+  - npm install
+  
 script: true
+
 branches:
   only:
   - master
