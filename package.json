@@ -19,12 +19,12 @@
     "lint:js:fix": "eslint --ignore-path .gitignore . --fix",
     "lint:sol": "solhint --max-warnings 0 \"contracts/**/*.sol\"",
     "solium": "solium -d .",
-    "prepack": "node scripts/remove-ignored-artifacts.js",
-    "release": "scripts/release/release.sh",
-    "version": "scripts/release/version.sh",
+    "oz:prepack": "node scripts/remove-ignored-artifacts.js",
+    "oz:release": "scripts/release/release.sh",
+    "oz:version": "scripts/release/version.sh",
     "cov:suite-0": "scripts/coverage.js",
     "cov:suite-1": "scripts/coverage.sh && cat coverage/lcov.info | coveralls",
-    "test": "mocha --exit --timeout 0 --recursive"
+    "oz:test": "mocha --exit --timeout 0 --recursive"
   },
   "repository": {
     "type": "git",
